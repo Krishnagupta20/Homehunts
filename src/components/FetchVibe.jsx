@@ -27,7 +27,7 @@ const FetchVibe = () => {
     fetchVibe();
   }, []);
 
-  console.log(response.data);
+  console.log(vibeData);
   if (error) return <p>Error: {error.message}</p>;
 
   return (

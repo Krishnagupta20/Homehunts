@@ -15,13 +15,19 @@ function Topbar() {
           onClick={handleRedirect1}
           className="text-gray-700 focus:outline-none"
         >
-         <img src="https://furrl.in/_next/static/media/Whislist.2ac94d87.svg" alt="wishlist"/>
+          <img
+            src="https://furrl.in/_next/static/media/Whislist.2ac94d87.svg"
+            alt="wishlist"
+          />
         </button>
         <button
           onClick={handleRedirect2}
           className="text-gray-700 focus:outline-none"
-        >  
-          <img src="https://furrl.in/_next/static/media/Bag.b94fa005.svg" alt="cart"/>
+        >
+          <img
+            src="https://furrl.in/_next/static/media/Bag.b94fa005.svg"
+            alt="cart"
+          />
         </button>
       </div>
     </nav>
