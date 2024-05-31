@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Share } from "react-feather";
-import ShareComponent from './ShareComponent'; // Ensure this is the correct path
+import ShareComponent from "./ShareComponent"; // Ensure this is the correct path
 
 const ProductItem = ({ product }) => {
   const [showShare, setShowShare] = useState(false);
@@ -14,15 +14,16 @@ const ProductItem = ({ product }) => {
   };
 
   const handleShareClick = (event) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     if (navigator.share) {
-      navigator.share({
-        title: 'Product Detail',
-        text: 'Check out this product!',
-        url: productDetailUrl,
-      })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
+      navigator
+        .share({
+          title: "Product Detail",
+          text: "Check out this product!",
+          url: productDetailUrl,
+        })
+        .then(() => console.log("Successful share"))
+        .catch((error) => console.log("Error sharing", error));
     } else {
       setShowShare(true);
     }
@@ -55,7 +56,7 @@ const ProductItem = ({ product }) => {
         <div className="px-4 py-2">
           <div className="flex justify-start items-center gap-1">
             <div
-              className={`text-sm sm:text-xl justify-start font-extralight ${
+              className={`text-xs sm:text-xl justify-start font-extralight ${
                 isLongName ? "text-xs" : ""
               } truncate`}
             >
@@ -64,7 +65,7 @@ const ProductItem = ({ product }) => {
           </div>
           <div className="flex justify-start items-center gap-1">
             <div
-              className={`text-sm sm:text-xl justify-start font-light ${
+              className={`text-xs sm:text-xl justify-start font-light ${
                 isLongName ? "text-xs" : ""
               } truncate`}
             >
